@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Research & Development</title>
+    <link rel="stylesheet" href="{% static 'solarpv/styles.css' %}">
+  </head>
+
+  <body>
+    <div class="header">
+      <img src="{% static 'solarpv/solar.jpg' %}" id="solar">
+      <div class="name">
+        <h1>solarPV</h1>
+        <h2>Research & Development</h2>
+      </div>
+
+      <div class="info">
+        <p class="p1">About Us</p>
+        <p class="p2">Contact Us</p>
+      </div>
+      <div style="clear: both;"></div>
+
+      <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+
+    <div class="navigationbar">
+      <a id="home" href="{% url 'index' %}">Home</a>
+      <a id="dash" href="{% url 'dashboard' %}">Dashboard</a>
+      <a href="#">Cybersecurity</a>
+      <a href="#">Data Analytics</a>
+      <a href="#">PV Systems</a>
+      <a href="#">PV Module</a>
+      <a href="#">Racks & Trackers</a>
+    </div>
+
+    <div class="center">
+      <h2>Register</h2>
+      <form action="" method="GET">
+         Username: <input type="text" name="username" required><br>
+         Client ID: <input type="text" name="clientid" required><br>
+         First Name: <input type="text" name="fname" required><br>
+         Middle Name (optional): <input type="text" name="mname"><br>
+         Last Name: <input type="text" name="lname" required><br>
+         Job Title: <input type="text" name="job" required><br>
+         Email: <input type="email" name="email" required><br>
+         Office Phone Number: <input type="number" name="phone" maxlength="10" required><br>
+         Cell Phone Number: <input type="number" name="phone" maxlength="10" required><br>
+         Prefix (Mr., Dr., etc.): <input type="text" name="prefix" required><br>
+         Are you staff? <input type="radio" name="isstaff" value="yes"> Yes
+         <input type="radio" name="isstaff" value="no"> No<br>
+         <input type="submit" value="Register" class="button">
+       </form>
+    </div>
+
+    <div class="footer">
+      <p><b>solarPV</b></p>
+      <div class="info">
+        <p class="alignleft">Address, Phone, Email, Website </p>
+        <p class="alignright">@2019 All Rights Reserved</p>
+      </div>
+
+      <div style="clear: both;"></div>
+
+      <ul>
+        <li><a href="#">Site Map</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

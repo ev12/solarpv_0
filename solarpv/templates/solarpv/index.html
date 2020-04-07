@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Research & Development</title>
+    <link rel="stylesheet" href="{% static 'solarpv/styles.css' %}">
+  </head>
+
+  <body>
+    <div class="header">
+      <img src="{% static 'solarpv/solar.jpg' %}" id="solar">
+      <div class="name">
+        <h1>solarPV</h1>
+        <h2>Research & Development</h2>
+      </div>
+
+      <div class="info">
+        <p class="p1">About Us</p>
+        <p class="p2">Contact Us</p>
+      </div>
+      <div style="clear: both;"></div>
+
+      <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+
+
+    <div class="navigationbar">
+      <a id="dash" href="{% url 'dashboard' %}">Dashboard</a>
+      <a href="#">Cybersecurity</a>
+      <a href="#">Data Analytics</a>
+      <a href="#">PV Systems</a>
+      <a href="#">PV Module</a>
+      <a href="#">Racks & Trackers</a>
+
+    </div>
+
+    <div class="rows">
+      <div class="left">
+        <button type="button" onclick="window.location.href = '{% url 'register' %}';" name="register">Register</button>
+        <button type="button" name="Login">Login</button>
+        <br><br>
+
+        <h3><a href="#">PV Module</a></h3>
+        <ul>
+          <li><a href="#">Testing & Certification</a></li>
+          <li><a href="#">PV Rating</a></li>
+        </ul>
+        <br>
+
+        <h3><a href="#">PV System Performance</a></h3>
+        <ul>
+          <li><a href="#">Monitoring & Inspection</a></li>
+          <li><a href="#">Performance Analysis</a></li>
+          <li><a href="#">Compare system</a></li>
+          <li><a href="#">Certification</a></li>
+        </ul>
+        <br>
+
+        <h3><a href="#">Data Analytics</a></h3>
+        <ul>
+          <li><a href="#">Module lifetime prediction</a></li>
+          <li><a href="#">Energy Prediction</a></li>
+        </ul>
+        <br>
+
+        <h3><a href="#">Cybersecurity and Smart Grid Technologies</a></h3>
+        <h3><a href="#">Solar PV University</a></h3>
+      </div>
+
+      <div class="center">
+        <h3><i>Feature Contents</i></h3>
+      </div>
+
+      <div class="right">
+        <h3>News & Events</h3>
+        <a href="#">PhotoVoltaic Technical Conference to take place in Marseille,France from 26 to 28 April 2017</a>
+        <br><br>
+        <a href="#">Trump is next US president</a>
+        <br><br>
+        <a href="#">Syrian forces recapture Aleppo</a>
+        <br><br>
+        <a href="#">Senate votes on SCOTUS nominee</a>
+      </div>
+
+    </div>
+
+
+    <div class="footer">
+      <p><b>solarPV</b></p>
+      <div class="info">
+        <p class="alignleft">Address, Phone, Email, Website </p>
+        <p class="alignright">@2019 All Rights Reserved</p>
+      </div>
+
+      <div style="clear: both;"></div>
+
+      <ul>
+        <li><a href="#">Site Map</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

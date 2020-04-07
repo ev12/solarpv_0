@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Research & Development</title>
+    <link rel="stylesheet" href="{% static 'solarpv/styles.css' %}">
+  </head>
+
+  <body>
+    <div class="header">
+      <img src="{% static 'solarpv/solar.jpg' %}" id="solar">
+      <div class="name">
+        <h1>solarPV</h1>
+        <h2>Research & Development</h2>
+      </div>
+
+      <div class="info">
+        <p class="p1">About Us</p>
+        <p class="p2">Contact Us</p>
+      </div>
+      <div style="clear: both;"></div>
+
+      <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+
+    <div class="navigationbar">
+      <a id="home" href="{% url 'index' %}">Home</a>
+      <a href="#">Cybersecurity</a>
+      <a href="#">Data Analytics</a>
+      <a href="#">PV Systems</a>
+      <a href="#">PV Module</a>
+      <a href="#">Racks & Trackers</a>
+    </div>
+
+    <div class="center">
+     <form class="client" action="" method="post">
+       <h2>Client</h2>
+       <input type="text" name="clientid" maxlength="6" required placeholder="Client ID">
+       <input type="text" name="clientcode" required placeholder="Client Code">
+       <input type="text" name="clientname" required placeholder="Client Name">
+       <input type="text" name="clienttype" required placeholder="Client Type">
+       <input type="submit" value="Submit" class="button">
+     </form>
+     <form class="location" action="" method="post">
+       <h2>Location</h2>
+       <input type="text" name="locationid" required placeholder="Location ID">
+       <input type="text" name="clientid" required placeholder="Client ID">
+       <input type="text" name="address1" required placeholder="Address 1">
+       <input type="text" name="address2" required placeholder="Address 2">
+       <input type="text" name="city" required placeholder="City">
+       <input type="text" name="state" required placeholder="State">
+       <input type="number" name="postalcode" required placeholder="Postal Code">
+       <input type="text" name="country" required placeholder="Country">
+       <input type="number" name="phone" maxlength="10" required placeholder="Phone Number">
+       <input type="number" name="fax" required placeholder="Fax Number">
+       <input type="submit" value="Submit" class="button">
+     </form>
+
+     <form class="product" action="" method="post">
+       <h2>Product</h2>
+       <input type="text" name="modelnum" required placeholder="Modle Number ">
+       <input type="text" name="name" required placeholder="Name ">
+       <input type="text" name="celltech" required placeholder="Cell Technology">
+       <input type="text" name="cellmanu" required placeholder="Cell Manufacturer">
+       <input type="number" name="numofcells" required placeholder="Number of Cells">
+       <input type="number" name="numofcellsinseries" required placeholder="Number of Cells in Series">
+       <input type="number" name="numofseries" required placeholder="Number of Series Strings">
+       <input type="number" name="numofdiodes" required placeholder="Number of Diodes">
+       <input type="number" name="porductlength" required placeholder="Product Length">
+       <input type="number" name="productwidth" required placeholder="Product Width">
+       <input type="number" name="productweight" required placeholder="Product Weight">
+       <input type="text" name="superstratetype" required placeholder="Superstrate Type">
+       <input type="text" name="superstratemanu" required placeholder="Superstrate Manufacturer">
+       <input type="text" name="substratetype" required placeholder="Substrate Type">
+       <input type="text" name="substratemanu" required placeholder="Substrate Manufacturer">
+       <input type="text" name="frametype" required placeholder="Frame Type">
+       <input type="text" name="frameadhesive" required placeholder="Frame Adhesive">
+       <input type="text" name="encapsulanttype" required placeholder="Encapsulant Type">
+       <input type="text" name="encapsulantmanu" required placeholder="Encapsulant Manufacturer">
+       <input type="text" name="junctionboxtype" required placeholder="Junction Box Type">
+       <input type="text" name="junctionboxmanu" required placeholder="Junction Box Manufacturer">
+       <input type="submit" value="Submit" class="button">
+     </form>
+
+     <form class="teststandard" action="" method="post">
+       <h2>Test Standard</h2>
+       <input type="text" name="standardid" required placeholder="Standard ID">
+       <input type="text" name="standardname" required placeholder="Standard Name">
+       <input type="text" name="descriptions" required placeholder="Description">
+       <input type="date" name="publisheddate" required placeholder="Published Date">
+       <input type="submit" value="Submit" class="button">
+     </form>
+
+     <form class="certificate" action="" method="post">
+       <h2>Certificate</h2>
+       <input type="text" name="id" required placeholder="ID">
+       <input type="number" name="certnumber" required placeholder="Cert Number">
+       <input type="text" name="location" required placeholder="Location">
+       <input type="number" name="reportnumber" required placeholder="Report Number">
+       <input type="text" name="contactid" required placeholder="Contact ID">
+       <input type="text" name="teststandard" required placeholder="Test Standard">
+       <input type="text" name="product" required placeholder="Product">
+       <input type="date" name="certissuedate" required placeholder="Cert Issue Date">
+       <input type="submit" value="Submit" class="button">
+     </form>
+    </div>
+
+    <div class="footer">
+      <p><b>solarPV</b></p>
+      <div class="info">
+        <p class="alignleft">Address, Phone, Email, Website </p>
+        <p class="alignright">@2019 All Rights Reserved</p>
+      </div>
+
+      <div style="clear: both;"></div>
+
+      <ul>
+        <li><a href="#">Site Map</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
