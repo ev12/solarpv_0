@@ -87,13 +87,19 @@
   padding: 10px;
   text-align: center;
 }
+.c {
+  -ms-flex: 60%;
+  flex: 60%;
+  background-color: floralwhite;
+  padding: 10px;
+
+}
 /*right column*/
 .right {
   -ms-flex: 15%;
   flex: 15%;
   background-color: lightgray;
-  padding: 10px;
-  text-align: center;
+  padding: 10px
 }
 
 .left button {

@@ -1,12 +1,15 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
+from rest_framework import routers
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'product', views.ProductViewSet)
+router.register(r'services', views.ServiceViewSet)
+router.register(r'certificates', views.CertificateViewSet)
 
 app_name = 'backend'
+
 urlpatterns = [
-    path('products/', views.ProductListView.as_view(), name='product_list'),
-    path('products/<pk>/', views.ProductDetailView.as_view(), name='product_detail'),
-    path('certificates/', views.CertificateListView.as_view(), name='certificate_list'),
-    path('certificates/<pk>/', views.CertificateDetailView.as_view(), name='certificate_detail'),
-    path('services/', views.ServiceListView.as_view(), name='service_list'),
-    path('services/<pk>/', views.ServiceDetailView.as_view(), name='service_detail'),
+    path('', include(router.urls)),
 ]

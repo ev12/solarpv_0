@@ -39,23 +39,16 @@
       <a href="#">Racks & Trackers</a>
     </div>
 
-    <div class="rows">
-      <div class="left"></div>
-      <div class="c">
-        <h2>Register</h2>
-        <form method="POST">
-          <fieldset class="form-group">
-            {% csrf_token %}
-            {{ form|crispy }}
-            {{ profile_form|crispy}}
-          </fieldset>
-          <div class="form-group">
-            <input type="submit" value="Register" class="button">
-          </div>
-        </form>
-      </div>
-      <div class="right"></div>
+    <div class="center">
+      <h2>Login</h2>
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+         <input type="submit" value="Login" class="button"><br><br>
+         {{ form.errors }}
+       </form>
     </div>
+
     <div class="footer">
       <p><b>solarPV</b></p>
       <div class="info">

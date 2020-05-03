@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -22,55 +23,16 @@ class Client (models.Model):
         return self.clientType
 
 
-class User(models.Model):
-    username = models.CharField(max_length=20)
-    password = models.CharField(max_length=20)
-    first_name = models.CharField(max_length=20)
+class Users(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     middle_name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=20)
     address = models.CharField(max_length=20)
     officePhone = models.CharField(max_length=15)
     cellPhone = models.CharField(max_length=15)
-    email = models.CharField(max_length=50)
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
 
-    def setUsername(self, username):
-        self.username = username
-    def setPassword(self, password):
-        self.password = password
-    def setFirstName(self, first_name):
-        self.first_name = first_name
-    def setMiddleName(self, middle_name):
-        self.middle_name = middle_name
-    def setLastName(self, last_name):
-        self.last_name = last_name
-    def setAddress(self, address):
-        self.address = address
-    def setOfficePhone(self, officePhone):
-        self.officePhone = officePhone
-    def setCellPhone(self, cellPhone):
-        self.cellPhone = cellPhone
-    def setEmail(self, email):
-        self.email = email
-
-    def getUsername(self):
-        return self.username
-    def getPassword(self):
-        return self.password
-    def getFirstName(self):
-        return self.first_name
-    def getMiddleName(self):
-        return self.midde_name
-    def getLastName(self):
-        return self.last_name
-    def getAddress(self):
-        return self.address
-    def getOfficePhone(self):
-        return self.officePhone
-    def getCellPhone(self):
-        return self.cellPhone
-    def getEmail(self):
-        return self.email
+    def __str__(self):
+        return self.user.username
 
 
 class Product(models.Model):
@@ -236,6 +198,7 @@ class TestStandard(models.Model):
         return self.description
     def getpublishDate(self):
         return self.publishDate
+
 
 class Certificate(models.Model):
     certID = models.CharField(max_length=8)

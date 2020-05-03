@@ -1,5 +1,4 @@
 {% load static %}
-{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -31,7 +30,7 @@
 
     <div class="navigationbar">
       <a id="home" href="{% url 'index' %}">Home</a>
-      <a id="dash" href="{% url 'admin:index' %}">Dashboard</a>
+      <a id="dash" href="{% url 'dashboard' %}">Dashboard</a>
       <a href="#">Cybersecurity</a>
       <a href="#">Data Analytics</a>
       <a href="#">PV Systems</a>
@@ -39,23 +38,21 @@
       <a href="#">Racks & Trackers</a>
     </div>
 
-    <div class="rows">
-      <div class="left"></div>
-      <div class="c">
-        <h2>Register</h2>
-        <form method="POST">
-          <fieldset class="form-group">
-            {% csrf_token %}
-            {{ form|crispy }}
-            {{ profile_form|crispy}}
-          </fieldset>
-          <div class="form-group">
-            <input type="submit" value="Register" class="button">
-          </div>
-        </form>
-      </div>
-      <div class="right"></div>
+    <div class="center">
+      <h2>Login</h2>
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        {{ form.username.label_tag }}
+        {{ form.username }}<br>
+
+        {{ form.password.label_tag }}
+        {{ form.password }}<br>
+
+         <input type="submit" value="Login" class="button"><br><br>
+         {{ form.errors }}
+       </form>
     </div>
+
     <div class="footer">
       <p><b>solarPV</b></p>
       <div class="info">
